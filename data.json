@@ -1,0 +1,297 @@
+{
+  "courses": [
+    { "id": "cbse", "name": "CBSE Academics", "badge": "Class 10 - 12", "icon": "🎓" },
+    { "id": "ssc", "name": "SSC (CGL, CHSL, MTS)", "badge": "Govt Exams", "icon": "📝" },
+    { "id": "railway", "name": "Railway (RRB NTPC)", "badge": "Railways", "icon": "🚆" }
+  ],
+  "cbse": {
+    "12": {
+      "physics": {
+        "title": "Class 12 Physics",
+        "chapters": [
+          {
+            "id": "ch1_phy12",
+            "name": "Electric Charges and Fields",
+            "topics": [
+              "Coulomb's Law",
+              "Electric Field and Field Lines",
+              "Electric Dipole and Dipole Moment",
+              "Gauss's Theorem & Applications",
+              "Electric Flux"
+            ]
+          },
+          {
+            "id": "ch2_phy12",
+            "name": "Electrostatic Potential & Capacitance",
+            "topics": [
+              "Equipotential Surfaces",
+              "Potential Due to Electric Dipole",
+              "Capacitors and Capacitance",
+              "Dielectrics and Polarisation",
+              "Energy Stored in a Capacitor"
+            ]
+          },
+          {
+            "id": "ch3_phy12",
+            "name": "Current Electricity",
+            "topics": [
+              "Drift Velocity & Mobility",
+              "Ohm's Law & Temperature Dependence",
+              "Kirchhoff's Laws",
+              "Wheatstone Bridge",
+              "EMF and Internal Resistance"
+            ]
+          }
+        ]
+      },
+      "chemistry": {
+        "title": "Class 12 Chemistry",
+        "chapters": [
+          {
+            "id": "ch1_chem12",
+            "name": "Solutions",
+            "topics": [
+              "Henry's Law",
+              "Raoult's Law & Colligative Properties",
+              "Elevation in Boiling Point",
+              "Depression in Freezing Point",
+              "Van't Hoff Factor"
+            ]
+          },
+          {
+            "id": "ch2_chem12",
+            "name": "Electrochemistry",
+            "topics": [
+              "Nernst Equation",
+              "Kohlrausch's Law",
+              "Molar Conductivity",
+              "Electrolysis & Faraday's Laws"
+            ]
+          }
+        ]
+      },
+      "maths": {
+        "title": "Class 12 Mathematics",
+        "chapters": [
+          {
+            "id": "ch1_math12",
+            "name": "Continuity and Differentiability",
+            "topics": [
+              "Limits & Continuity Test",
+              "Chain Rule of Differentiation",
+              "Logarithmic Differentiation",
+              "Second Order Derivatives"
+            ]
+          },
+          {
+            "id": "ch2_math12",
+            "name": "Integrals",
+            "topics": [
+              "Integration by Substitution",
+              "Integration by Partial Fractions",
+              "Integration by Parts",
+              "Definite Integrals & Properties"
+            ]
+          }
+        ]
+      },
+      "biology": {
+        "title": "Class 12 Biology",
+        "chapters": [
+          {
+            "id": "ch1_bio12",
+            "name": "Sexual Reproduction in Flowering Plants",
+            "topics": [
+              "Microsporogenesis",
+              "Megasporogenesis",
+              "Pollination Mechanisms",
+              "Double Fertilization"
+            ]
+          }
+        ]
+      }
+    },
+    "11": {
+      "physics": {
+        "title": "Class 11 Physics",
+        "chapters": [
+          {
+            "id": "ch1_phy11",
+            "name": "Kinematics & Motion in a Straight Line",
+            "topics": ["Velocity & Speed", "Equations of Uniform Motion", "Relative Velocity", "Free Fall Under Gravity"]
+          }
+        ]
+      },
+      "chemistry": {
+        "title": "Class 11 Chemistry",
+        "chapters": [
+          {
+            "id": "ch1_chem11",
+            "name": "Structure of Atom",
+            "topics": ["Bohr's Model", "de Broglie Wavelength", "Heisenberg Uncertainty Principle", "Quantum Numbers"]
+          }
+        ]
+      },
+      "maths": {
+        "title": "Class 11 Mathematics",
+        "chapters": [
+          {
+            "id": "ch1_math11",
+            "name": "Sets and Relations",
+            "topics": ["Subsets & Power Sets", "Venn Diagrams", "Cartesian Product", "Types of Relations"]
+          }
+        ]
+      },
+      "biology": {
+        "title": "Class 11 Biology",
+        "chapters": [
+          {
+            "id": "ch1_bio11",
+            "name": "Cell: The Unit of Life",
+            "topics": ["Prokaryotic vs Eukaryotic", "Endomembrane System", "Mitochondria & Chloroplast"]
+          }
+        ]
+      }
+    },
+    "10": {
+      "physics": {
+        "title": "Class 10 Physics / Science",
+        "chapters": [
+          {
+            "id": "ch1_phy10",
+            "name": "Light - Reflection and Refraction",
+            "topics": ["Spherical Mirrors & Mirror Formula", "Refraction & Snell's Law", "Lens Formula & Magnification", "Power of Lens"]
+          }
+        ]
+      },
+      "chemistry": {
+        "title": "Class 10 Chemistry / Science",
+        "chapters": [
+          {
+            "id": "ch1_chem10",
+            "name": "Chemical Reactions and Equations",
+            "topics": ["Balancing Chemical Equations", "Types of Chemical Reactions", "Corrosion and Rancidity"]
+          }
+        ]
+      },
+      "maths": {
+        "title": "Class 10 Mathematics",
+        "chapters": [
+          {
+            "id": "ch1_math10",
+            "name": "Quadratic Equations",
+            "topics": ["Standard Form", "Factorisation Method", "Quadratic Formula", "Nature of Roots"]
+          }
+        ]
+      },
+      "biology": {
+        "title": "Class 10 Biology / Science",
+        "chapters": [
+          {
+            "id": "ch1_bio10",
+            "name": "Life Processes",
+            "topics": ["Autotrophic Nutrition", "Human Digestive System", "Respiration in Humans", "Double Circulation"]
+          }
+        ]
+      }
+    }
+  },
+  "questions": [
+    {
+      "id": "Q101",
+      "chapterId": "ch1_phy12",
+      "topic": "Coulomb's Law",
+      "type": "mcq",
+      "exam": "boards",
+      "year": "2025",
+      "text": "Two point charges +3 µC and +4 µC repel each other with a force of 12 N. If an additional charge of -5 µC is given to each of them, what will be the new force between them?",
+      "options": ["2 N attractive", "4 N repulsive", "2 N repulsive", "6 N attractive"],
+      "correct": "2 N attractive",
+      "solution": "New charges become q1 = 3 - 5 = -2 µC, q2 = 4 - 5 = -1 µC... product is positive, force ratio calculates to 2 N attractive due to polarity switch."
+    },
+    {
+      "id": "Q102",
+      "chapterId": "ch1_phy12",
+      "topic": "Coulomb's Law",
+      "type": "numericals",
+      "exam": "jee main",
+      "year": "2024",
+      "text": "Two small identical conducting balls having charges 2 x 10^-7 C and 3 x 10^-7 C are placed 30 cm apart in air. Calculate the electrostatic force exerted on each other.",
+      "solution": "Using Coulomb's law F = (k * q1 * q2) / r^2. k = 9 x 10^9, r = 0.3 m. F = (9e9 * 2e-7 * 3e-7) / (0.3^2) = 6 x 10^-3 N."
+    },
+    {
+      "id": "Q103",
+      "chapterId": "ch1_phy12",
+      "topic": "Gauss's Theorem & Applications",
+      "type": "a-r",
+      "exam": "boards",
+      "year": "2024",
+      "text": "Assertion (A): Electric flux through a closed surface containing no net charge is always zero.\nReason (R): Gauss's Law states that total flux is equal to Q_enclosed / ε0.",
+      "options": [
+        "Both A and R are true, and R is the correct explanation of A",
+        "Both A and R are true, but R is NOT the correct explanation of A",
+        "A is true, but R is false",
+        "A is false, but R is true"
+      ],
+      "correct": "Both A and R are true, and R is the correct explanation of A",
+      "solution": "According to Gauss's law Φ = Q_enc / ε0. When Q_enc = 0, Φ = 0."
+    },
+    {
+      "id": "Q104",
+      "chapterId": "ch1_phy12",
+      "topic": "Electric Dipole and Dipole Moment",
+      "type": "vsaq",
+      "exam": "boards",
+      "year": "2023",
+      "text": "What is the direction of the electric dipole moment vector with respect to the charges?",
+      "solution": "By convention in Physics, the electric dipole moment vector is directed from the negative charge (-q) to the positive charge (+q)."
+    },
+    {
+      "id": "Q105",
+      "chapterId": "ch1_phy12",
+      "topic": "Electric Field and Field Lines",
+      "type": "mcq",
+      "exam": "neet",
+      "year": "2025",
+      "text": "Which of the following statements is incorrect regarding electric field lines?",
+      "options": [
+        "They start from positive charge and terminate on negative charge",
+        "Two field lines can never cross each other",
+        "They form closed continuous loops",
+        "The tangent at any point gives the direction of electric field"
+      ],
+      "correct": "They form closed continuous loops",
+      "solution": "Electrostatic field lines cannot form closed loops because the electrostatic field is conservative."
+    },
+    {
+      "id": "Q106",
+      "chapterId": "ch1_phy12",
+      "topic": "Gauss's Theorem & Applications",
+      "type": "numericals",
+      "exam": "jee advanced",
+      "year": "2023",
+      "text": "A point charge q is placed at the corner of a cube of side a. Find the total electric flux emerging through the cube.",
+      "solution": "By symmetry, 8 cubes are required to enclose the charge at the corner. Hence, flux through one cube = q / (8 * ε0)."
+    },
+    {
+      "id": "Q107",
+      "chapterId": "ch1_phy12",
+      "topic": "Electric Dipole and Dipole Moment",
+      "type": "short",
+      "exam": "boards",
+      "year": "2024",
+      "text": "Derive an expression for the torque experienced by an electric dipole placed in a uniform electric field.",
+      "solution": "Torque τ = force x perpendicular distance = (qE) * (2a sin θ) = pE sin θ. In vector form: τ = p x E."
+    },
+    {
+      "id": "Q108",
+      "chapterId": "ch1_phy12",
+      "topic": "Gauss's Theorem & Applications",
+      "type": "long",
+      "exam": "boards",
+      "year": "2023",
+      "text": "State Gauss's theorem in electrostatics. Apply this theorem to derive an expression for the electric field intensity due to an infinitely long straight uniformly charged wire.",
+      "solution": "Gauss's Theorem states Φ = ∮ E · dA = Q_enclosed / ε0. For a cylindrical Gaussian surface of radius r and length L enclosing linear charge density λ, E * (2πrL) = (λL)/ε0 => E = λ / (2πε0r)."
+    }
+  ]
+}

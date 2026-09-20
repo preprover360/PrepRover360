@@ -1,0 +1,787 @@
+:root{
+  --bg:#f7f8fa;
+  --surface:#fff;
+  --text:#17202a;
+  --muted:#667085;
+  --border:#e4e7ec;
+  --accent:#315efb;
+  --accent-soft:#eef2ff;
+  --shadow:0 4px 16px rgba(16,24,40,.06);
+  --brand-name-color: #111827;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+
+button,input,select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.hidden{
+  display:none!important;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header{
+  min-height:64px;
+  padding:12px 4%;
+  background:rgba(255,255,255,.94);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.brand-mark{
+  width:36px;
+  height:36px;
+  border-radius:10px;
+  background:var(--accent);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  font-size:1.1rem;
+}
+
+.brand-name{
+  font-size:1.15rem;
+  font-weight:800;
+  color: var(--brand-name-color);
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.brand-tagline{
+  color:var(--muted);
+  font-size:.76rem;
+}
+
+.icon-button{
+  width:38px;
+  height:38px;
+  border:1px solid var(--border);
+  border-radius:50%;
+  background:var(--surface);
+  color:var(--text);
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container{
+  width:min(1100px,92%);
+  margin:auto;
+  padding:28px 0;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.welcome-section{
+  text-align:center;
+  padding:18px 0 30px;
+}
+
+.welcome-section h1{
+  margin:6px 0 8px;
+  font-size:clamp(2rem,5vw,3.2rem);
+  line-height:1.1;
+}
+
+.welcome-text{
+  max-width:650px;
+  margin:auto;
+  color:var(--muted);
+}
+
+.eyebrow{
+  margin:0;
+  color:var(--accent);
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.muted{
+  color:var(--muted);
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-heading{
+  margin-bottom:14px;
+}
+
+.section-heading h2{
+  margin:0 0 3px;
+}
+
+
+/* =========================
+   COURSE CARDS
+========================= */
+
+.course-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:14px;
+}
+
+.course-card{
+  min-height:140px;
+  padding:18px 14px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:var(--surface);
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  color:var(--text);
+  transition:.18s;
+}
+
+.course-card:hover{
+  transform:translateY(-2px);
+  border-color:var(--accent);
+}
+
+.course-icon{
+  font-size:1.7rem;
+}
+
+.course-name{
+  font-weight:800;
+}
+
+.course-description{
+  color:var(--muted);
+  font-size:.8rem;
+  text-align:center;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.back-button{
+  border:0;
+  background:transparent;
+  color:var(--accent);
+  padding:4px 0;
+  font-weight:700;
+}
+
+.page-title{
+  margin:18px 0 20px;
+}
+
+.page-title h1{
+  margin:4px 0;
+  font-size:clamp(1.7rem,4vw,2.5rem);
+  line-height:1.15;
+}
+
+
+/* =========================
+   CLASS / SUBJECT
+========================= */
+
+.selection-panel{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  padding:18px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  box-shadow:var(--shadow);
+}
+
+.selection-group label,
+.search-label{
+  display:block;
+  margin-bottom:6px;
+  font-weight:700;
+}
+
+.selection-group select,
+.small-search,
+.topic-search-wrapper input{
+  width:100%;
+  min-height:44px;
+  padding:8px 12px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:var(--surface);
+  color:var(--text);
+  outline:0;
+}
+
+.selection-group select:focus,
+.small-search:focus,
+.topic-search-wrapper input:focus{
+  border-color:var(--accent);
+}
+
+
+/* =========================
+   CHAPTER LIST
+========================= */
+
+.browse-section{
+  margin-top:26px;
+}
+
+.browse-section .section-heading{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+
+.small-search{
+  max-width:260px;
+}
+
+.chapter-list{
+  display:grid;
+  gap:8px;
+}
+
+.chapter-button{
+  width:100%;
+  padding:13px 15px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:var(--surface);
+  color:var(--text);
+  text-align:left;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.chapter-button:hover{
+  border-color:var(--accent);
+  background:var(--accent-soft);
+}
+
+
+/* =====================================================
+   CHAPTER PAGE — COMPACT
+===================================================== */
+
+#chapterView .page-title{
+  margin:12px 0 16px;
+}
+
+#chapterView .page-title h1{
+  margin:3px 0 5px;
+  font-size:clamp(1.7rem,3.5vw,2.5rem);
+}
+
+#chapterView .page-title .muted{
+  margin:0;
+}
+
+#chapterView .topic-section{
+  margin-top:10px;
+}
+
+#chapterView .search-label{
+  margin-bottom:5px;
+}
+
+#chapterView .topic-search-wrapper input{
+  min-height:42px;
+  padding:7px 12px;
+}
+
+#chapterView .selected-topic{
+  margin-top:8px;
+}
+
+
+/* =========================
+   TOPIC SUGGESTIONS
+========================= */
+
+.topic-search-wrapper{
+  position:relative;
+}
+
+.suggestions{
+  position:absolute;
+  z-index:10;
+  left:0;
+  right:0;
+  top:calc(100% + 4px);
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:10px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.suggestion{
+  width:100%;
+  padding:9px 12px;
+  border:0;
+  border-bottom:1px solid var(--border);
+  background:var(--surface);
+  color:var(--text);
+  text-align:left;
+}
+
+.suggestion:hover{
+  background:var(--accent-soft);
+}
+
+.selected-topic{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:999px;
+  background:var(--accent-soft);
+  color:var(--accent);
+  font-weight:700;
+  font-size:.85rem;
+}
+
+
+/* =====================================================
+   FILTER PANEL — COMPACT
+===================================================== */
+
+#chapterView .question-filter-section{
+  margin-top:18px;
+  padding:16px 20px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  box-shadow:var(--shadow);
+}
+
+
+/* Filter title */
+
+#chapterView .question-filter-section > .section-heading{
+  margin-bottom:4px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+#chapterView .question-filter-section
+.section-heading h2{
+  font-size:1.2rem;
+}
+
+
+/* Every filter row */
+
+#chapterView .filter-group{
+  padding:10px 0;
+  border-top:1px solid var(--border);
+}
+
+#chapterView .filter-heading{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  margin-bottom:6px;
+  font-weight:800;
+}
+
+
+/* Required / optional */
+
+#chapterView .required-label,
+#chapterView .optional-label{
+  font-size:.67rem;
+  padding:2px 7px;
+  border-radius:999px;
+  background:var(--accent-soft);
+  color:var(--accent);
+}
+
+
+/* Filter chips */
+
+#chapterView .filter-options{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+
+#chapterView .filter-chip{
+  padding:5px 11px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:var(--surface);
+  color:var(--text);
+  font-size:.85rem;
+  line-height:1.3;
+}
+
+#chapterView .filter-chip:hover{
+  border-color:var(--accent);
+}
+
+#chapterView .filter-chip.active{
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+}
+
+
+/* NCERT */
+
+#chapterView .ncert-filter{
+  padding:8px 0;
+}
+
+#chapterView .ncert-filter label{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  font-weight:700;
+}
+
+
+/* Message */
+
+#chapterView .filter-message{
+  margin:6px 0 9px;
+  padding:8px 11px;
+  border-radius:8px;
+  background:#fff7ed;
+  color:#9a3412;
+  font-size:.86rem;
+}
+
+
+/* Clear */
+
+#chapterView .clear-button{
+  padding:6px 12px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--surface);
+  color:var(--text);
+  font-size:.85rem;
+}
+
+
+/* =========================
+   RESULTS
+========================= */
+
+.chapter-results{
+  margin-top:22px;
+}
+
+.results-header{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  align-items:flex-end;
+}
+
+.results-header h2{
+  margin:3px 0;
+}
+
+.active-filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin:10px 0;
+}
+
+.active-filter{
+  padding:4px 9px;
+  border-radius:999px;
+  background:var(--accent-soft);
+  color:var(--accent);
+  font-size:.8rem;
+  font-weight:700;
+}
+
+.question-list{
+  display:grid;
+  gap:12px;
+}
+
+.question-card{
+  padding:16px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+
+.question-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:9px;
+}
+
+.question-number{
+  font-weight:800;
+}
+
+
+.meta{
+  padding:3px 8px;
+  border-radius:999px;
+  background:var(--bg);
+  font-size:.75rem;
+}
+
+.question-preview img,
+.question-detail img{
+  display:block;
+  max-width:100%;
+  margin:14px auto;
+}
+
+.solution-button{
+  margin-top:12px;
+  padding:8px 12px;
+  border:0;
+  border-radius:8px;
+  background:var(--accent);
+  color:#fff;
+  font-weight:700;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:5px;
+  margin:14px 0;
+}
+
+.page-button{
+  min-width:36px;
+  padding:6px 10px;
+  border:1px solid var(--border);
+  border-radius:7px;
+  background:var(--surface);
+  color:var(--text);
+}
+
+.page-button.active{
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+}
+
+.page-button:disabled{
+  opacity:.45;
+  cursor:not-allowed;
+}
+
+
+/* =========================
+   QUESTION DETAIL
+========================= */
+
+.question-detail{
+  margin-top:18px;
+  padding:20px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  box-shadow:var(--shadow);
+}
+
+.solution{
+  margin-top:20px;
+  padding-top:18px;
+  border-top:1px solid var(--border);
+}
+.solution div {
+  white-space: pre-line;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+  padding:22px 4%;
+  border-top:1px solid var(--border);
+  background:var(--surface);
+  text-align:center;
+}
+
+.site-footer p{
+  margin:3px 0;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark{
+  --bg:#101828;
+  --surface:#182230;
+  --text:#f2f4f7;
+  --muted:#98a2b3;
+  --border:#344054;
+  --accent-soft:#1d2f63;
+  --shadow:0 4px 16px rgba(0,0,0,.22);
+  --brand-name-color: #0b4738;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+  .course-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+}
+
+
+@media(max-width:700px){
+
+  .site-header{
+    padding:11px 4%;
+  }
+
+  .brand-tagline{
+    display:none;
+  }
+
+  .container{
+    width:94%;
+    padding:22px 0;
+  }
+
+  .selection-panel{
+    grid-template-columns:1fr;
+  }
+
+  .course-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .browse-section .section-heading{
+    align-items:stretch;
+    flex-direction:column;
+  }
+
+  .small-search{
+    max-width:none;
+  }
+
+  #chapterView .question-filter-section{
+    padding:14px 15px;
+  }
+
+  #chapterView .question-filter-section
+  > .section-heading{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:2px;
+  }
+
+}
+
+
+@media(max-width:450px){
+
+  .course-grid{
+    grid-template-columns:1fr;
+  }
+
+  #chapterView .page-title h1{
+    font-size:1.65rem;
+  }
+
+  #chapterView .filter-chip{
+    padding:6px 10px;
+    font-size:.82rem;
+  }
+
+}
+
+.mcq-options {
+  display: grid;
+  gap: 10px 24px;
+  margin-top: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mcq-options.short-options {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.mcq-options.long-options {
+  grid-template-columns: 1fr;
+}
+
+.mcq-option {
+  line-height: 1.5;
+}
+
+.option-label {
+  font-weight: 600;
+  margin-right: 5px;
+}
