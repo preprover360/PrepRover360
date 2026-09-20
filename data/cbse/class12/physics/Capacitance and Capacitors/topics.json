@@ -1,0 +1,24 @@
+{
+  "topics": [
+    {
+      "id": "capacitance",
+      "name": "Capacitance"
+    },
+    {
+      "id": "parallel-plate-capacitor",
+      "name": "The Parallel Plate Capacitor"
+    },
+    {
+      "id": "effect-of-dielectric-on-capacitance",
+      "name": "Effect of Dielectric on Capacitance"
+    },
+    {
+      "id": "combination-of-capacitors",
+      "name": "Combination of Capacitors"
+    },
+    {
+      "id": "energy-stored-in-a-capacitor",
+      "name": "Energy Stored in a Capacitor"
+    }
+  ]
+}

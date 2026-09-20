@@ -1,0 +1,48 @@
+{
+  "topics": [
+    {
+      "id": "reflection-by-spherical-mirrors",
+      "name": "Reflection by Spherical Mirrors"
+    },
+    {
+      "id": "mirror-equation-and-magnification",
+      "name": "Mirror Equation and Magnification"
+    },
+    {
+      "id": "refraction-and-refractive-index",
+      "name": "Refraction and Refractive Index"
+    },
+    {
+      "id": "total-internal-refraction",
+      "name": "Total Internal Refraction"
+    },
+    {
+      "id": "refraction-at-spherical-surface",
+      "name": "Refraction at Spherical Surface"
+    },
+    {
+      "id": "lens-makers-formula",
+      "name": "Lens Maker's Formula"
+    },
+    {
+      "id": "lens-equation-and-magnification",
+      "name": "Lens Equation and Magnification"
+    },
+    {
+      "id": "power-and-combination-of-lens",
+      "name": "Power and Combination of Lens"
+    },
+    {
+      "id": "refraction-through-prism",
+      "name": "Refraction Through Prism"
+    },
+    {
+      "id": "microscope",
+      "name": "Microscope"
+    },
+    {
+      "id": "telescope",
+      "name": "Telescope"
+    }
+  ]
+}
