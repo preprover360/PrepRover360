@@ -1,4 +1,4 @@
-# Aspirants-Aura V2 Starter
+# PrepRover360 V1
 
 New structure:
 Home → Course → Class → Subject → Chapter → Topic → Question Type (mandatory) → optional Exam / Year / NCERT → Questions → Solution.
