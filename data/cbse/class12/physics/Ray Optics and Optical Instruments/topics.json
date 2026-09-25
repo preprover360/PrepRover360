@@ -13,8 +13,8 @@
       "name": "Refraction and Refractive Index"
     },
     {
-      "id": "total-internal-refraction",
-      "name": "Total Internal Refraction"
+      "id": "total-internal-reflection",
+      "name": "Total Internal Reflection"
     },
     {
       "id": "refraction-at-spherical-surface",
