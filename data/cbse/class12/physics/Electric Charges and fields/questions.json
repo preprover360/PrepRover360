@@ -87,6 +87,36 @@
     "(D) $8\\,\\text{V}$"
   ],
   "answerId": "ANS-EF-0005"
+},
+{
+  "id": "EF-0006",
+  "topic": "electric-field",
+  "type": "mcq",
+  "marks": 1,
+  "exam": "boards",
+  "year": 2026,
+  "pyq": true,
+  "image": null,
+  "question": "A particle of mass $m$ and charge $q$ starts from rest and moves in an electric field $\\vec{E}=E_0\\hat{i}$. After travelling a distance $x$ in the field along x-axis, the kinetic energy of the particle will be:",
+  "options": [
+    "(A) $qE_0x^2$",
+    "(B) $qE_0x$",
+    "(C) $q^2E_0x$",
+    "(D) $q^2E_0^2x$"
+  ],
+  "answerId": "ANS-EF-0006"
+},
+{
+  "id": "EF-0007",
+  "topic": "application-of-gausss-law",
+  "type": "laq",
+  "marks": 5,
+  "exam": "boards",
+  "year": 2026,
+  "pyq": true,
+  "image": null,
+  "question": "(i) Two infinitely long straight wires having linear charge densities $-\\lambda$ and $3\\lambda$ are held vertically parallel to each other, distance $r$ apart in free space. Find the nature and magnitude of the force/length exerted by one wire on the other.<br>&nbsp;&nbsp;&nbsp;&nbsp;(ii) A small hollow conducting sphere of radius $r_1$ is given a charge $Q$. It is surrounded by a concentric conducting spherical shell of inner radius $r_2$ and outer radius $r_3$, having charge $-3q$.<br>&nbsp;&nbsp;&nbsp;&nbsp;If a point charge $2q$ were kept at the centre, find:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(I) the electric flux through a concentric spherical Gaussian surface of radius $x$ for (1) $x<r_1$, and (2) $r_1<x<r_2$.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(II) electric field at a point distant $x$ from the centre for (1) $x>r_3$, and (2) $r_1<x<r_2$.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(III) surface charge density on the inner surface of (1) sphere, and (2) shell.",
+  "answerId": "ANS-EF-0007"
 }
     
 ]
