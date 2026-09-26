@@ -2,7 +2,7 @@
   "questions": [
 {
   "id": "EP-0001",
-  "topic": "electric-field",
+  "topic": "relation-between-field-and-potential",
   "type": "mcq",
   "marks": 1,
   "exam": "boards",
