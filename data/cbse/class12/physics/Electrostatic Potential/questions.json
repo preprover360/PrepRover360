@@ -1,3 +1,24 @@
 {
-  "questions": []
+  "questions": [
+{
+  "id": "EP-0001",
+  "topic": "electric-field",
+  "type": "mcq",
+  "marks": 1,
+  "exam": "boards",
+  "year": 2026,
+  "pyq": true,
+  "ncert": false,
+  "reference": false,
+  "image": null,
+  "question": "In a region electric field is given by $\\vec{E}=4x\\hat{i}\\,\\text{N/C}$. The potential difference between points A $(x=1\\,\\text{m})$ and B $(x=3\\,\\text{m})$, $(V_A-V_B)$ is",
+  "options": [
+    "(A) $-16\\,\\text{V}$",
+    "(B) $16\\,\\text{V}$",
+    "(C) $-8\\,\\text{V}$",
+    "(D) $8\\,\\text{V}$"
+  ],
+  "answerId": "ANS-EF-0005"
+}
+  ]
 }
