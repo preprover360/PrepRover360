@@ -1,0 +1,44 @@
+{
+  "topics": [
+    {
+      "id": "potential-due-to-a-point-charge",
+      "name": "Potential Due to a Point Charge"
+    },
+    {
+      "id": "potential-due-to-an-electric-dipole",
+      "name": "Potential Due to an Electric Dipole"
+    },
+    {
+      "id": "potential-due-to-system-of-charges",
+      "name": "Potential Due to System of Charges"
+    },
+    {
+      "id": "equipotential-surfaces",
+      "name": "Equipotential Surfaces"
+    },
+    {
+      "id": "relation-between-field-and-potential",
+      "name": "Relation Between Field and Potential"
+    },
+    {
+      "id": "potential-energy-of-system-of-charges",
+      "name": "Potential Energy of System of Charges"
+    },
+    {
+      "id": "potential-energy-in-an-external-field",
+      "name": "Potential Energy in an External Field"
+    },
+    {
+      "id": "potential-energy-of-dipole",
+      "name": "Potential Energy of Dipole"
+    },
+    {
+      "id": "electrostatics-of-a-conductor",
+      "name": "Electrostatics of a Conductor"
+    },
+    {
+      "id": "dielectrics-and-polarisation",
+      "name": "Dielectrics and Polarisation"
+    }
+  ]
+}

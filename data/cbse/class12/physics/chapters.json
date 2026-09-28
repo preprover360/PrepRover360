@@ -1,0 +1,64 @@
+{
+  "chapters": [
+    {
+      "id": "electric-charges-and-fields",
+      "name": "Electric Charges and Fields"
+    },
+    {
+      "id": "electrostatic-potential",
+      "name": "Electrostatic Potential"
+    },
+    {
+      "id": "capacitance-and-capacitors",
+      "name": "Capacitance and Capacitors"
+    },
+    {
+      "id": "current-electricity",
+      "name": "Current Electricity"
+    },
+    {
+      "id": "moving-charges-and-magnetism",
+      "name": "Moving Charges and Magnetism"
+    },
+    {
+      "id": "magnetism-and-matter",
+      "name": "Magnetism and Matter"
+    },
+    {
+      "id": "electromagnetic-induction",
+      "name": "Electromagnetic Induction"
+    },
+    {
+      "id": "alternating-current",
+      "name": "Alternating Current"
+    },
+    {
+      "id": "electromagnetic-waves",
+      "name": "Electromagnetic Waves"
+    },
+    {
+      "id": "ray-optics-and-optical-instruments",
+      "name": "Ray Optics and Optical Instruments"
+    },
+    {
+      "id": "wave-optics",
+      "name": "Wave Optics"
+    },
+    {
+      "id": "dual-nature-of-radiation-and-matter",
+      "name": "Dual Nature of Radiation and Matter"
+    },
+    {
+      "id": "atoms",
+      "name": "Atoms"
+    },
+    {
+      "id": "nuclei",
+      "name": "Nuclei"
+    },
+    {
+      "id": "semiconductor-electronics",
+      "name": "Semiconductor Electronics"
+    }
+  ]
+}
