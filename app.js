@@ -19,6 +19,7 @@ const state = {
     year: null,
     ncert: false,
     exemplar: false,
+    sqp: false,
     reference: false
   },
 
@@ -332,6 +333,7 @@ function resetFilters() {
     year: null,
     ncert: false,
     exemplar: false,
+    sqp: false,
     reference: false
 
   };
@@ -582,10 +584,11 @@ function getResults() {
 
       &&
 
-      (
-        !state.filters.ncert ||
-        question.ncert === true
-      )
+      ( !state.filters.ncert || question.ncert === true)
+
+      &&
+
+      ( !state.filters.sqp || question.sqp === true)
 
       &&
 
@@ -737,6 +740,14 @@ function renderResults() {
 
     activeFilters.push(
       "NCERT"
+    );
+
+  }
+
+  if (state.filters.sqp) {
+
+    activeFilters.push(
+      "CBSE SQP"
     );
 
   }
@@ -1035,11 +1046,18 @@ function card(question) {
 
   } 
 
+  else if (question.sqp) {
+
+    source = "CBSE SQP";
+
+  }
+
   else if (question.exemplar) {
 
     source = "EXEMPLAR";
 
   }
+
   else if (question.reference) {
 
     source = "REFERENCE";
@@ -1151,22 +1169,34 @@ function card(question) {
       <div
   class="question-preview">
 
-  ${question.question || ""}
-
-
-  ${
-    question.image
-
-      ? `
-        <img
-          src="${esc(
-            question.image
-          )}"
-          alt="Question diagram">
-      `
-
-      : ""
-  }
+  ${(question.question || "")
+    .replace(
+      "{{IMAGE}}",
+      typeof question.image === "string"
+        ? `<img
+            class="question-image"
+            src="${esc(question.image)}"
+            alt="Question diagram">`
+        : ""
+    )
+    .replace(
+      "{{IMAGE1}}",
+      question.image?.image1
+        ? `<img
+            class="question-image"
+            src="${esc(question.image.image1)}"
+            alt="Question diagram">`
+        : ""
+    )
+    .replace(
+      "{{IMAGE2}}",
+      question.image?.image2
+        ? `<img
+            class="question-image"
+            src="${esc(question.image.image2)}"
+            alt="Question diagram">`
+        : ""
+    )}
 
 
   ${
@@ -1383,22 +1413,34 @@ function openQuestion(id) {
       class="question-preview">
 
 
-      ${question.question || ""}
-
-
-      ${
-        question.image
-
-          ? `
-            <img
-              src="${esc(
-                question.image
-              )}"
-              alt="Question diagram">
-          `
-
-          : ""
-      }
+  ${(question.question || "")
+    .replace(
+      "{{IMAGE}}",
+      typeof question.image === "string"
+        ? `<img
+            class="question-image"
+            src="${esc(question.image)}"
+            alt="Question diagram">`
+        : ""
+    )
+    .replace(
+      "{{IMAGE1}}",
+      question.image?.image1
+        ? `<img
+            class="question-image"
+            src="${esc(question.image.image1)}"
+            alt="Question diagram">`
+        : ""
+    )
+    .replace(
+      "{{IMAGE2}}",
+      question.image?.image2
+        ? `<img
+            class="question-image"
+            src="${esc(question.image.image2)}"
+            alt="Question diagram">`
+        : ""
+    )}
 
 
     </div>
@@ -1802,7 +1844,11 @@ async function openChapter(id) {
     .checked =
     false;
 
-    $("exemplarFilter")
+  $("exemplarFilter")
+    .checked =
+    false;
+
+  $("samplequestionFilter")
     .checked =
     false;
 
@@ -2311,6 +2357,34 @@ $("backToResults").onclick =
 
     };
 
+/*
+    SQP checkbox.
+  */
+  $("samplequestionFilter").onchange = event => {
+
+      if (
+        !state.chapterLoaded
+      ) {
+
+        event.target.checked =
+          false;
+
+        return;
+      }
+
+
+      state.filters.sqp =
+        event.target.checked;
+
+
+      state.currentPage =
+        1;
+
+
+      renderResults();
+
+    };
+
   /*
     REFERENCE checkbox.
   */
@@ -2376,6 +2450,10 @@ $("backToResults").onclick =
         false;
 
       $("exemplarFilter")
+        .checked =
+        false;
+
+      $("samplequestionFilter")
         .checked =
         false;
 
