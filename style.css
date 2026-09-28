@@ -401,7 +401,12 @@ button{
   border-radius:14px;
   box-shadow:var(--shadow);
 }
-
+.question-image {
+  display: block;
+  max-width: 60%;
+  height: auto;
+  margin: 20px auto;
+}
 
 /* Filter title */
 
@@ -572,6 +577,23 @@ button{
   font-weight:800;
 }
 
+.question-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  font-size: 0.95rem;
+}
+
+.question-table th,
+.question-table td {
+  border: 1px solid var(--border-color);
+  padding: 10px 14px;
+  text-align: center;
+}
+
+.question-table th {
+  font-weight: 600;
+}
 
 .meta{
   padding:3px 8px;
