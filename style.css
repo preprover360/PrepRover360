@@ -807,3 +807,67 @@ body.dark{
   font-weight: 600;
   margin-right: 5px;
 }
+
+/* Image options in one horizontal line */
+
+.mcq-options.image-options {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 15px !important;
+    width: 100% !important;
+}
+
+.mcq-options.image-options .mcq-option {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 0 !important;
+    width: 25% !important;
+    min-width: 0 !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+.mcq-options.image-options .option-label {
+    display: block !important;
+    margin-bottom: 5px;
+}
+
+.mcq-options.image-options .option-text {
+    display: block !important;
+    width: 100% !important;
+}
+
+.mcq-options.image-options .option-image {
+    display: block !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 5px auto !important;
+}
+
+.case-image-options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.case-image-option {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
+}
+
+.case-image-option .option-image {
+    display: block;
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
