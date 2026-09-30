@@ -1169,34 +1169,82 @@ function card(question) {
       <div
   class="question-preview">
 
-  ${(question.question || "")
-    .replace(
-      "{{IMAGE}}",
-      typeof question.image === "string"
+${(() => {
+
+  let text = question.question || "";
+
+  // Find consecutive image placeholders and group them
+  // into one horizontal row.
+  text = text.replace(
+    /((?:{{IMAGE\d+}}\s*(?:(?:<br\s*\/?>)\s*)*){2,})/g,
+    (group) => {
+
+      const placeholders =
+        group.match(/{{IMAGE\d+}}/g) || [];
+
+      return `
+        <div class="case-image-options">
+          ${placeholders.map((placeholder) => {
+
+            const imageKey =
+              placeholder
+                .replace("{{", "")
+                .replace("}}", "")
+                .toLowerCase();
+
+            const imageSrc =
+              question.image?.[imageKey] || "";
+
+            return imageSrc
+              ? `
+                <div class="case-image-option">
+                  <img
+                    class="option-image"
+                    src="${esc(imageSrc)}"
+                    alt="Question option">
+                </div>
+              `
+              : "";
+
+          }).join("")}
+        </div>
+      `;
+    }
+  );
+
+  // Render any remaining individual image normally
+  text = text.replace(
+    /{{(IMAGE\d*)}}/g,
+    (match, imageKey) => {
+
+      let imageSrc = "";
+
+      if (imageKey === "IMAGE") {
+
+        if (typeof question.image === "string") {
+          imageSrc = question.image;
+        }
+
+      } else {
+
+        imageSrc =
+          question.image?.[
+            imageKey.toLowerCase()
+          ] || "";
+      }
+
+      return imageSrc
         ? `<img
             class="question-image"
-            src="${esc(question.image)}"
+            src="${esc(imageSrc)}"
             alt="Question diagram">`
-        : ""
-    )
-    .replace(
-      "{{IMAGE1}}",
-      question.image?.image1
-        ? `<img
-            class="question-image"
-            src="${esc(question.image.image1)}"
-            alt="Question diagram">`
-        : ""
-    )
-    .replace(
-      "{{IMAGE2}}",
-      question.image?.image2
-        ? `<img
-            class="question-image"
-            src="${esc(question.image.image2)}"
-            alt="Question diagram">`
-        : ""
-    )}
+        : "";
+    }
+  );
+
+  return text;
+
+})()}
 
 
   ${
@@ -1205,6 +1253,15 @@ function card(question) {
 
       ? `
         <div class="mcq-options ${
+  question.options.some(
+  option =>
+    typeof option === "object" &&
+    option.type === "image" &&
+    option.image
+)
+    ? "image-options"
+    : ""
+} ${
   question.options.every(option => option.length <= 20)
     ? "short-options"
     : question.options.some(option => option.length > 100)
@@ -1212,23 +1269,39 @@ function card(question) {
       : ""
 }">
 
-          ${question.options
-            .map(
-              (option, index) => `
-                <div class="mcq-option">
+${question.options
+  .map(
+    (option, index) => `
+      <div class="mcq-option">
 
-                  <span class="option-label">
-                    (${String.fromCharCode(97 + index)})
-                  </span>
+        <span class="option-label">
+          ${
+            option &&
+            typeof option === "object" &&
+            option.label
+              ? option.label
+              : `(${String.fromCharCode(97 + index)})`
+          }
+        </span>
 
-                  <span class="option-text">
-                    ${option}
-                  </span>
+        <span class="option-text">
+          ${
+            option &&
+            typeof option === "object" &&
+            option.type === "image" &&
+            option.image
+              ? `<img
+                  class="option-image"
+                  src="${esc(option.image)}"
+                  alt="Option ${String.fromCharCode(65 + index)}">`
+              : option
+          }
+        </span>
 
-                </div>
-              `
-            )
-            .join("")}
+      </div>
+    `
+  )
+  .join("")}
 
         </div>
       `
@@ -1413,34 +1486,53 @@ function openQuestion(id) {
       class="question-preview">
 
 
-  ${(question.question || "")
-    .replace(
-      "{{IMAGE}}",
-      typeof question.image === "string"
-        ? `<img
-            class="question-image"
-            src="${esc(question.image)}"
-            alt="Question diagram">`
-        : ""
-    )
-    .replace(
-      "{{IMAGE1}}",
-      question.image?.image1
-        ? `<img
-            class="question-image"
-            src="${esc(question.image.image1)}"
-            alt="Question diagram">`
-        : ""
-    )
-    .replace(
-      "{{IMAGE2}}",
-      question.image?.image2
-        ? `<img
-            class="question-image"
-            src="${esc(question.image.image2)}"
-            alt="Question diagram">`
-        : ""
-    )}
+  ${(question.question || "").replace(
+  /{{(IMAGE\d*)}}/g,
+  (match, imageKey) => {
+
+    let imageSrc = "";
+
+    if (imageKey === "IMAGE") {
+
+      // {{IMAGE}} → image1 when question.image is an object
+      if (typeof question.image === "string") {
+        imageSrc = question.image;
+      } else if (
+        question.image &&
+        typeof question.image === "object"
+      ) {
+        imageSrc = question.image.image1 || "";
+      }
+
+    } else {
+
+      // {{IMAGE1}}, {{IMAGE2}}, {{IMAGE3}}, etc.
+      if (imageKey === "IMAGE") {
+
+  if (typeof question.image === "string") {
+    imageSrc = question.image;
+  } else {
+    imageSrc = question.image?.image1 || "";
+  }
+
+} else {
+
+  imageSrc =
+    question.image?.[
+      imageKey.toLowerCase()
+    ] || "";
+
+}
+    }
+
+    return imageSrc
+      ? `<img
+          class="question-image"
+          src="${esc(imageSrc)}"
+          alt="Question diagram">`
+      : "";
+  }
+)}
 
 
     </div>
