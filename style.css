@@ -1193,3 +1193,34 @@ body.dark{
 #chapterView #resultsTop {
   scroll-margin-top: 0;
 }
+/* Fix chapter scrolling on phones using desktop-site mode */
+@media (pointer: coarse) and (max-height: 1000px) {
+  body:has(#chapterView:not(.hidden)) {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  body:has(#chapterView:not(.hidden)) .container {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  #chapterView:not(.hidden) {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  #chapterView .chapter-workspace {
+    min-height: 0;
+    overflow: visible;
+  }
+
+  #chapterView .question-pane {
+    min-height: 0;
+    height: auto;
+    overflow: visible;
+    padding-bottom: 24px;
+  }
+}
