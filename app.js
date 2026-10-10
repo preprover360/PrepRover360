@@ -2581,6 +2581,35 @@ $("backToResults").onclick =
     }
   );
 
+  // Filter sidebar: Hide / Show
+const chapter = document.getElementById("chapterView");
+const hideButton = document.getElementById("toggleFilterSidebar");
+const showButton = document.getElementById("showFilterSidebar");
+
+if (chapter && hideButton && showButton) {
+  hideButton.addEventListener("click", () => {
+    chapter.classList.add("filters-collapsed");
+    showButton.hidden = false;
+  });
+
+  showButton.addEventListener("click", () => {
+    chapter.classList.remove("filters-collapsed");
+    showButton.hidden = true;
+  });
+}
+
+// Back to top: scroll only the question pane
+const questionPane = document.getElementById("questionPane");
+const backToTopButton = document.getElementById("backToTop");
+
+if (questionPane && backToTopButton) {
+  backToTopButton.addEventListener("click", () => {
+    questionPane.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
   /*
     Start at home.
   */
