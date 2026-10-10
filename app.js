@@ -2598,18 +2598,28 @@ if (chapter && hideButton && showButton) {
   });
 }
 
-// Back to top: scroll only the question pane
+// Back to top: support both desktop and mobile scrolling
 const questionPane = document.getElementById("questionPane");
-const backToTopButton = document.getElementById("backToTop");
+const backToTopButton = document.querySelector(
+  "#chapterView .back-to-top"
+);
 
 if (questionPane && backToTopButton) {
-  backToTopButton.addEventListener("click", () => {
+  backToTopButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
     questionPane.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+    window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
   });
 }
+
   /*
     Start at home.
   */
